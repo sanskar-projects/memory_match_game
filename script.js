@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let firstCard = null;
     let secondCard = null;
     let lockBoard = false;
+    let matches = 0;
 
     function createCard(image) {
         const card = document.createElement('div');
@@ -45,7 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
+        matches++;
         resetBoard();
+        if (matches === cardImages.length) {
+            displayWinMessage();
+        }
     }
 
     function unflipCards() {
@@ -60,6 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function resetBoard() {
         [firstCard, secondCard, lockBoard] = [null, null, false];
+    }
+
+    function displayWinMessage() {
+        const winMessage = document.createElement('div');
+        winMessage.classList.add('win-message');
+        winMessage.innerText = 'You Win!';
+        document.body.appendChild(winMessage);
     }
 
     cardsArray.forEach(image => {
