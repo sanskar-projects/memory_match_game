@@ -28,5 +28,3 @@ The JavaScript code for this project is structured as follows:
 This memory match game project is a demonstration of fundamental web development skills, including DOM manipulation, event handling, and basic game logic. The project provides an interactive and enjoyable way for users to test and improve their memory skills.
 
 **Project developed with the help of artificial intelligence.**
-
----
