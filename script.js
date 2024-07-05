@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let secondCard = null;
     let lockBoard = false;
     let matches = 0;
+    let moves = 0;
 
     function createCard(image) {
         const card = document.createElement('div');
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function checkForMatch() {
+        moves++;
         const isMatch = firstCard.innerHTML === secondCard.innerHTML;
 
         isMatch ? disableCards() : unflipCards();
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWinMessage() {
-        alert('You Win!');
+        alert(`You Win! Total moves: ${moves}`);
     }
 
     cardsArray.forEach(image => {
