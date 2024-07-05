@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const cardImages = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.jpg', 'g.jpg', 'h.jpg'];
+    const allImages = [
+        'a.jpg', 'aa.jpg', 'b.jpg', 'bb.jpg', 'c.jpg', 'cc.jpg', 'd.jpg', 'dd.jpg',
+        'e.jpg', 'ee.jpg', 'f.jpg', 'ff.jpg', 'g.jpg', 'gg.jpg', 'h.jpg', 'hh.jpg'
+    ];
+
+    // Shuffle all images and select the first 8
+    allImages.sort(() => 0.5 - Math.random());
+    const cardImages = allImages.slice(0, 8);
+
+    // Duplicate the selected images for pairs
     let cardsArray = [...cardImages, ...cardImages];
     cardsArray.sort(() => 0.5 - Math.random());
 
