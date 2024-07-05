@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWinMessage() {
-        alert(`You Win! Total moves: ${moves}`);
+        alert(`You Win!\nTotal moves: ${moves}`);
     }
 
     cardsArray.forEach(image => {
