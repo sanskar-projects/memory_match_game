@@ -5,12 +5,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
 }
 
 .board {
@@ -22,8 +25,10 @@ h1 {
 .card {
     width: 150px;
     height: 150px;
-    border: 1px solid #ccc;
+    border: 2px solid #fff;
+    border-radius: 10px;
     perspective: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-inner {
@@ -34,6 +39,7 @@ h1 {
     transition: transform 0.5s;
     transform-style: preserve-3d;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .card.flipped .card-inner {
@@ -45,6 +51,7 @@ h1 {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 .card-front {
@@ -52,10 +59,12 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-back {
     transform: rotateY(180deg);
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
 }
