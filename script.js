@@ -68,10 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWinMessage() {
-        const winMessage = document.createElement('div');
-        winMessage.classList.add('win-message');
-        winMessage.innerText = 'You Win!';
-        document.body.appendChild(winMessage);
+        alert('You Win!');
     }
 
     cardsArray.forEach(image => {
